@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional IT Support, CCTV Installation, and Networking Services in the Philippines. Reliable solutions for SMBs and homeowners.">
-    <title>Nexus IT Solutions | Reliable IT Support Philippines</title>
+    <meta name="description" content="Affordable & reliable freelance IT services in the Philippines. CCTV, Networking, and PC Troubleshooting for homes and small businesses.">
+    <title>Your Name | Reliable IT Support & Setup</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #0a2540;
-            --secondary: #00d4ff;
-            --dark-gray: #333;
-            --light-gray: #f4f7fa;
+            --primary-blue: #2563eb;
+            --secondary-blue: #dbeafe;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
             --white: #ffffff;
-            --accent: #0056b3;
-            --transition: all 0.3s ease;
         }
 
         * {
@@ -26,342 +25,275 @@
             font-family: 'Inter', sans-serif;
         }
 
-        html { scroll-behavior: smooth; }
-
         body {
             line-height: 1.6;
-            color: var(--dark-gray);
+            color: var(--text-dark);
             background-color: var(--white);
+            scroll-behavior: smooth;
         }
 
         /* --- Navigation --- */
         nav {
-            background: var(--primary);
-            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            width: 100%;
+            padding: 1.5rem 10%;
+            background: var(--white);
+            position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .logo {
-            color: var(--white);
-            font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
         }
-
-        .logo span { color: var(--secondary); }
 
         .nav-links {
             display: flex;
             list-style: none;
+            gap: 2rem;
         }
-
-        .nav-links li { margin-left: 2rem; }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--white);
+            color: var(--text-dark);
             font-weight: 500;
-            transition: var(--transition);
+            transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--secondary); }
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
 
         /* --- Hero Section --- */
-        #home {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.9)), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1920') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .hero {
+            padding: 100px 10% 60px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--secondary-blue) 100%);
             text-align: center;
-            color: var(--white);
-            padding: 0 20px;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
+            line-height: 1.2;
         }
 
-        .hero-content p {
+        .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
         }
 
         .btn {
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
             display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.3s;
         }
 
-        .btn-primary { background: var(--secondary); color: var(--primary); }
-        .btn-primary:hover { background: var(--white); transform: translateY(-3px); }
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
 
         /* --- Services --- */
-        section { padding: 5rem 10%; }
-        
+        .section {
+            padding: 80px 10%;
+        }
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
 
-        .section-title h2 { font-size: 2.5rem; color: var(--primary); }
-        .section-title div { 
-            width: 50px; height: 4px; background: var(--secondary); 
-            margin: 10px auto; 
-        }
+        .section-title h2 { font-size: 2rem; }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
-            background: var(--light-gray);
             padding: 2rem;
-            border-radius: 10px;
+            background: var(--bg-light);
+            border-radius: 12px;
             border-bottom: 4px solid transparent;
-            transition: var(--transition);
+            transition: all 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-bottom: 4px solid var(--primary-blue);
         }
 
-        .service-card h3 { margin-bottom: 1rem; color: var(--primary); }
-
-        /* --- Portfolio --- */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
         }
 
-        .portfolio-item {
-            height: 250px;
-            background: #ddd;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
+        /* --- About & Experience --- */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .project-list {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            background-size: cover;
-            background-position: center;
         }
 
-        .portfolio-overlay {
-            position: absolute;
-            bottom: 0; background: rgba(10, 37, 64, 0.8);
-            width: 100%; padding: 1rem; text-align: center;
+        .project-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1 1 300px;
         }
 
         /* --- Contact --- */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
         }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
+        .contact-info h3 { margin-bottom: 1rem; }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input, textarea {
             padding: 1rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .info-item { margin-bottom: 1.5rem; }
-        .info-item h4 { color: var(--primary); }
-
-        /* --- Footer --- */
-        footer {
-            background: var(--primary);
-            color: var(--white);
-            padding: 3rem 10% 1rem;
-            text-align: center;
-        }
-
-        /* --- Floating Button --- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 999;
-        }
-
-        /* --- Animations --- */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            outline-color: var(--primary-blue);
         }
 
         /* --- Responsive --- */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+            .hero h1 { font-size: 2rem; }
             .contact-container { grid-template-columns: 1fr; }
+            .section { padding: 60px 5%; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">NEXUS<span>IT</span></div>
+        <div class="logo">IT Solutions PH</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="home">
-        <div class="hero-content">
-            <h1>Reliable IT Solutions for Your Business</h1>
-            <p>Expert CCTV installation, networking, and cybersecurity services tailored for small businesses and homeowners in the Philippines.</p>
-            <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        </div>
+    <section id="home" class="hero">
+        <h1>Affordable IT Help <br>You Can Trust</h1>
+        <p>Expert freelance IT technician providing reliable tech support for homes and small businesses in the local community.</p>
+        <a href="#contact" class="btn">Get Help Now</a>
     </section>
 
-    <section id="services">
+    <section id="services" class="section">
         <div class="section-title">
-            <h2>Our Core Services</h2>
-            <div></div>
+            <h2>How I Can Help</h2>
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <h3>CCTV Installation</h3>
-                <p>High-definition surveillance with Hikvision and Dahua systems. Remote viewing on your mobile device included.</p>
+                <h3>CCTV Systems</h3>
+                <p>Installation and troubleshooting for Hikvision, Dahua, and NVR systems to keep your property safe.</p>
             </div>
             <div class="service-card">
-                <h3>Network Setup</h3>
-                <p>Structured cabling, fiber optics, and robust Wi-Fi mesh systems for seamless connectivity across your office.</p>
+                <h3>Better WiFi</h3>
+                <p>Eliminate dead spots with professional WiFi setup, structured cabling, and fiber optimization.</p>
             </div>
             <div class="service-card">
-                <h3>Cybersecurity</h3>
-                <p>SonicWall firewall deployment, VPN setups for remote work, and malware protection for your data.</p>
+                <h3>Network Security</h3>
+                <p>Configuration of SonicWall firewalls, VPNs for remote work, and secure router setups.</p>
             </div>
             <div class="service-card">
-                <h3>Server & Email</h3>
-                <p>Active Directory management, professional mail server hosting, and secure data storage solutions.</p>
+                <h3>PC Repair</h3>
+                <p>Fixing slow computers, removing viruses, and solving connectivity issues quickly.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" style="background-color: var(--light-gray);">
-        <div class="section-title">
-            <h2>Why Choose Us?</h2>
-            <div></div>
-        </div>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>With years of experience in the Philippine IT landscape, we provide enterprise-grade technology solutions for small to medium budgets. We believe in reliability, transparency, and building systems that "just work" so you can focus on your business.</p>
+    <section id="about" class="section" style="background-color: var(--bg-light);">
+        <div class="about-content">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <p>I’m a seasoned IT professional offering my expertise as a side-hustle to help my local community. Unlike big corporate firms, I provide personalized service, honest advice, and practical solutions that fit your budget.</p>
             <br>
-            <a href="#contact" class="btn" style="background: var(--primary); color: white;">Request a Site Visit</a>
+            <p><strong>Reliable • Honest • Practical</strong></p>
         </div>
     </section>
 
-    <section id="portfolio">
+    <section class="section">
         <div class="section-title">
             <h2>Recent Projects</h2>
-            <div></div>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&q=80&w=500');">
-                <div class="portfolio-overlay">16-Cam IP CCTV Deployment</div>
+        <div class="project-list">
+            <div class="project-item">
+                <h4>Small Office Setup</h4>
+                <p>Installed a complete 8-camera CCTV system and configured a secure office WiFi network.</p>
             </div>
-            <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=500');">
-                <div class="portfolio-overlay">Server Room Management</div>
-            </div>
-            <div class="portfolio-item" style="background-image: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=500');">
-                <div class="portfolio-overlay">Fiber Backbone Installation</div>
+            <div class="project-item">
+                <h4>Home Mesh WiFi</h4>
+                <p>Optimized a 3-story home for seamless WiFi coverage using a modern Mesh system.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="section-title">
-            <h2>Contact Us</h2>
-            <div></div>
-        </div>
+    <section id="contact" class="section" style="background-color: var(--secondary-blue);">
         <div class="contact-container">
             <div class="contact-info">
-                <div class="info-item">
-                    <h4>Location</h4>
-                    <p>Metro Manila / Bulacan / Rizal, Philippines</p>
-                </div>
-                <div class="info-item">
-                    <h4>Email</h4>
-                    <p>support@nexus-it.ph</p>
-                </div>
-                <div class="info-item">
-                    <h4>Phone</h4>
-                    <p>+63 912 345 6789</p>
-                </div>
+                <h2>Let's Talk Tech</h2>
+                <p>Need a quote or have a quick question? Reach out and I'll get back to you as soon as possible.</p>
+                <br>
+                <p><strong>Phone:</strong> +63 9XX XXX XXXX</p>
+                <p><strong>Email:</strong> yourname@email.com</p>
+                <p><strong>Location:</strong> Metro Manila / Your Area</p>
             </div>
-            <form class="contact-form" id="contactForm">
+            <form id="contactForm">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="How can we help you?" required></textarea>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                <textarea rows="5" placeholder="How can I help you?" required></textarea>
+                <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Message</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Nexus IT Solutions Philippines. All Rights Reserved.</p>
+    <footer style="text-align: center; padding: 2rem; color: var(--text-light); font-size: 0.9rem;">
+        &copy; 2026 IT Solutions PH. All rights reserved.
     </footer>
 
-    <a href="https://wa.me/639123456789" class="whatsapp-float" target="_blank">
-        Chat via WhatsApp
-    </a>
-
     <script>
-        // Simple form submission handler
+        // Simple form handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you! Your message has been sent. We will contact you shortly.');
+            alert('Thank you! Your message has been sent. I will get back to you shortly.');
             this.reset();
         });
-
-        // Smooth scroll for nav links (already supported by CSS, but good for older browsers)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
     </script>
+
 </body>
 </html>

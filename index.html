@@ -273,12 +273,11 @@
                 <p><strong>Email:</strong> yourname@email.com</p>
                 <p><strong>Location:</strong> Metro Manila / Your Area</p>
             </div>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="How can I help you?" required></textarea>
-                <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Message</button>
-            </form>
+         <form action="https://formspree.io/f/xnjlykan" method="POST">
+              <input type="email" name="email" required />
+              <textarea name="message" required></textarea>
+              <button type="submit">Send</button>
+        </form>
         </div>
     </section>
 
